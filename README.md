@@ -1,5 +1,15 @@
 # Nestjs study
 
+## Auth api
+| Method and Route  |  Body or Query String | Description | Controller Method | Service Method |
+|---|---|---|---|---|
+| POST `/auth/signup` | Body - { email, password} | Create a new user | createUser | create |
+| GET `/auth/:id` |  | Find a user with given id | findUser | findOne | findOne |
+| GET `/auth?email={email}` |  | Find all users with given email | findAllUser | find |
+| PATCH `/auth/:id` | Body - { email, password } | Update a user with given id | updateUser | update |
+| DELETE `/auth/:id` |  | Delete user with given id | removeUser | remove |
+
+
 ## Installation
 
 ```bash
