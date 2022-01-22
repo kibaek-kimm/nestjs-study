@@ -1,5 +1,6 @@
 # compiled output
 /dist
+/src/server/dist
 /node_modules
 
 # Logs
@@ -39,3 +40,4 @@ test.sqlite
 
 .env.development
 .env.test
+.next

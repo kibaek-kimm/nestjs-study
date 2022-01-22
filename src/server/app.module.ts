@@ -8,7 +8,8 @@ import { AppService } from "./app.service";
 import { UsersModule } from "./users/users.module";
 import { ReportsModule } from "./reports/reports.module";
 import { User } from "./users/user.entity";
-import { Reports } from "./reports/reports.entity";
+import { Report } from "./reports/reports.entity";
+import { ViewModule } from "./view/view.module";
 const cookieSession = require("cookie-session");
 
 @Module({
@@ -24,17 +25,12 @@ const cookieSession = require("cookie-session");
         return {
           type: "sqlite",
           database: config.get<string>("DB_NAME"),
-          entities: [User, Reports],
+          entities: [User, Report],
           synchronize: true,
         };
       },
     }),
-    // TypeOrmModule.forRoot({
-    //   type: "sqlite",
-    //   database: process.env.DB_NAME,
-    //   entities: [User, Reports],
-    //   synchronize: true,
-    // }),
+    ViewModule,
     UsersModule,
     ReportsModule,
   ],

@@ -21,7 +21,7 @@ import { CurrentUser } from "./decorators/current-user.decorator";
 import { User } from "./user.entity";
 import { AuthGuard } from "../guards/auth.guard";
 
-@Controller("auth")
+@Controller("api/auth")
 @Serialize(UserDto)
 export class UsersController {
   constructor(
