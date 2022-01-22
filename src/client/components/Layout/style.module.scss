@@ -1,0 +1,11 @@
+@import "../../styles/common.module.scss";
+@import "../../styles/mixins.scss";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.contents {
+  @extend .layout;
+}

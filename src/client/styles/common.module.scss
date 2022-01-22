@@ -1,0 +1,33 @@
+.layout {
+  width: 1020px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.input {
+  height: 44px;
+}
+
+.linkHover {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+
+  &:hover, &.active {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
