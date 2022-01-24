@@ -30,9 +30,9 @@ const cookieSession = require("cookie-session");
         };
       },
     }),
-    ViewModule,
     UsersModule,
     ReportsModule,
+    ViewModule,
   ],
   controllers: [AppController],
   providers: [
