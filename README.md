@@ -9,6 +9,14 @@
 | PATCH `/auth/:id` | Body - { email, password } | Update a user with given id | updateUser | update |
 | DELETE `/auth/:id` |  | Delete user with given id | removeUser | remove |
 
+## Report api
+| Method and Route  |  Body or Query String | Description | Controller Method | Service Method |
+|---|---|---|---|---|
+| GET `/reports` | QS - { make, model, year, mileage, longitude, latitude } | Get an estimate for the cars value | createUser | create |
+| POST `/reports` | Body { make, model, year, mileage, longitude, latitude } | Report how much a vehicle sold for | findUser | findOne | findOne |
+| GET `/auth?email={email}` |  | Find all users with given email | findAllUser | find |
+| PATCH `/reports/:id` | Body - { approved } | Approve or reject a report submitted by a user | updateUser | update |
+
 
 ## Installation
 
