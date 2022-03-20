@@ -8,8 +8,7 @@ import { AppService } from "./app.service";
 import { UsersModule } from "./users/users.module";
 import { ReportsModule } from "./reports/reports.module";
 import { User } from "./users/user.entity";
-import { Report } from "./reports/reports.entity";
-import { ViewModule } from "./view/view.module";
+import { Reports } from "./reports/reports.entity";
 const cookieSession = require("cookie-session");
 
 @Module({
@@ -25,11 +24,20 @@ const cookieSession = require("cookie-session");
         return {
           type: "sqlite",
           database: config.get<string>("DB_NAME"),
-          entities: [User, Report],
+          entities: [User, Reports],
           synchronize: true,
         };
       },
     }),
+<<<<<<< HEAD:src/server/app.module.ts
+=======
+    // TypeOrmModule.forRoot({
+    //   type: "sqlite",
+    //   database: process.env.DB_NAME,
+    //   entities: [User, Reports],
+    //   synchronize: true,
+    // }),
+>>>>>>> parent of fd38ddb (feat: server로직과 client로직 분리):src/app.module.ts
     UsersModule,
     ReportsModule,
     ViewModule,
