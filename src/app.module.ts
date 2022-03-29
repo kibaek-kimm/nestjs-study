@@ -18,22 +18,6 @@ const cookieSession = require("cookie-session");
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     TypeOrmModule.forRoot(),
-    // TypeOrmModule.forRootAsync({
-    //   inject: [ConfigService],
-    //   useFactory: (config: ConfigService) => {
-    //     return {
-    //       type: "sqlite",
-    //       database: config.get<string>("DB_NAME"),
-    //       entities: [User, Report],
-    //       synchronize: true,
-    //       /**
-    //        * typeORM과 database사이 sync를 맞출것인지에 대한 설정. 필히 개발모드에서만 true로 사용해야한다.
-    //        * 데이터의 싱크를 맞추는 작업이 필요한 경우라면 migration을 통해 데이터의 정합성을 맞춰야한다.
-    //        * https://mulmandu17.tistory.com/69
-    //        */
-    //     };
-    //   },
-    // }),
     UsersModule,
     ReportsModule,
   ],
