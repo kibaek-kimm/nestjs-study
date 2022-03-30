@@ -31,7 +31,7 @@ switch (process.env.NODE_ENV) {
     Object.assign(dbConfig, {
       type: "postgres",
       url: process.env.DATABASE_URL,
-      migrations: true,
+      migrationsRun: true,
       entities: ["**/*.entity.js"],
       ssl: {
         rejectUnauthorized: false,
